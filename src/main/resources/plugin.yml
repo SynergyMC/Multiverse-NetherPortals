@@ -32,3 +32,4 @@ commands:
   mvnpshow:
     description: Generic Multiverse-NetherPortals Command
     usage: /<command>
+api-version: 1.13
