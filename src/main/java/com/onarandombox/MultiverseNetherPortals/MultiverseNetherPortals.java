@@ -14,24 +14,20 @@ import com.onarandombox.MultiverseNetherPortals.listeners.MVNPPlayerListener;
 import com.onarandombox.MultiverseNetherPortals.listeners.MVNPPluginListener;
 import com.onarandombox.MultiversePortals.MultiversePortals;
 import com.pneumaticraft.commandhandler.multiverse.CommandHandler;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
-import org.bukkit.Location;
-import org.bukkit.plugin.Plugin;
 
 public class MultiverseNetherPortals extends JavaPlugin implements MVPlugin {
 
