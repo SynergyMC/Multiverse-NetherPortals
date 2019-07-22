@@ -1,5 +1,14 @@
 package com.onarandombox.MultiverseNetherPortals;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Level;
+
 import com.dumptruckman.minecraft.util.Logging;
 import com.onarandombox.MultiverseCore.MultiverseCore;
 import com.onarandombox.MultiverseCore.api.MVPlugin;
@@ -13,7 +22,7 @@ import com.onarandombox.MultiverseNetherPortals.listeners.MVNPEntityListener;
 import com.onarandombox.MultiverseNetherPortals.listeners.MVNPPlayerListener;
 import com.onarandombox.MultiverseNetherPortals.listeners.MVNPPluginListener;
 import com.onarandombox.MultiversePortals.MultiversePortals;
-import com.pneumaticraft.commandhandler.multiverse.CommandHandler;
+import com.onarandombox.commandhandler.CommandHandler;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -23,11 +32,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.*;
-import java.util.logging.Level;
 
 public class MultiverseNetherPortals extends JavaPlugin implements MVPlugin {
 
@@ -47,7 +51,7 @@ public class MultiverseNetherPortals extends JavaPlugin implements MVPlugin {
     private Map<String, String> linkMap;
     private Map<String, String> endLinkMap;
     protected CommandHandler commandHandler;
-    private final static int requiresProtocol = 9;
+    private final static int requiresProtocol = 23;
     private MVNPEntityListener entityListener;
 
     @Override
@@ -139,7 +143,7 @@ public class MultiverseNetherPortals extends JavaPlugin implements MVPlugin {
         this.commandHandler.registerCommand(new LinkCommand(this));
         this.commandHandler.registerCommand(new UnlinkCommand(this));
         this.commandHandler.registerCommand(new ShowLinkCommand(this));
-        for (com.pneumaticraft.commandhandler.multiverse.Command c : this.commandHandler.getAllCommands()) {
+        for (com.onarandombox.commandhandler.Command c : this.commandHandler.getAllCommands()) {
             if (c instanceof HelpCommand) {
                 c.addKey("mvnp");
             }
