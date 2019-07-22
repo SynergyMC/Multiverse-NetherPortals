@@ -82,6 +82,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
+                            <Built-By></Built-By>
                         </manifestEntries>
                     </archive>
                 </configuration>
